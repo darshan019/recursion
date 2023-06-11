@@ -4,7 +4,7 @@ function sort(arr){
     if(arr.length < 2){
         return arr
     }
-    let pivot = arr[arr.length - 1]
+    let pivot = arr[Math.floor(Math.random()*arr.length)]
     
     let left = []
     let right = [pivot]
