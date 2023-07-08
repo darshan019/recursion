@@ -1,18 +1,12 @@
-function fibsRec(n) {
-    let results = []
-
-    function recursion(n){
-        if(n === 2){
-            results.push(0,1)
-            return results
-        }
-        recursion(n-1)
-        let fibVal = results[results.length - 1] + results[results.length - 2];
-        results.push(fibVal)
-        return results
+let r = []
+function fib(n) {
+    if(n == 2) {
+        r.push(0,1)
+        return r
     }
-    recursion(n)
-    return results
+    fib(n-1)
+    let a = r[r.length-1]+r[r.length-2]
+    r.push(a)
+    return r
 }
-  
-console.log(fibsRec(5));
+console.log(fib(10))    // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377
