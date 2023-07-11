@@ -8,14 +8,13 @@ function sort(arr){
     
     let left = []
     let right = [pivot]
+    
     for(let i = 0; i < arr.length; i++){
         if(arr[i] < pivot){
             left.push(arr[i])
         }
-    }
-    for(let j = 0; j < arr.length; j++){
-        if(arr[j] > pivot){
-            right.push(arr[j])
+        else if(arr[i] > pivot) {
+            right.push(arr[i])
         }
     }
     return [...sort(left), ...sort(right)]
